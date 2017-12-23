@@ -17,12 +17,12 @@ import RouterFlux from './src/Router';
 export default class App extends Component{
   componentWillMount() {
     const config = {
-      apiKey: "", //with yours
-      authDomain: "",
-      databaseURL: "",
-      projectId: "",
-      storageBucket: "",
-      messagingSenderId: ""
+      apiKey: "AIzaSyCOZ-wqkdoq2giuVp5sRjyBi5dVybQhmYc", //with
+      authDomain: "authentication-2dae3.firebaseapp.com",
+      databaseURL: "https://authentication-2dae3.firebaseio.com",
+      projectId: "authentication-2dae3",
+      storageBucket: "authentication-2dae3.appspot.com",
+      messagingSenderId: "1048715646051"
     };
     firebase.initializeApp(config);
   }

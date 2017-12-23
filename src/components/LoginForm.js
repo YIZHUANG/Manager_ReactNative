@@ -8,6 +8,7 @@ import {
   loginFail,
   loginSucess
 } from "../actions/index";
+import EmployeeList from "./EmployeeList";
 import { Card, CardSection, Input, Button, Spinner } from "./common";
 
 class LoginForm extends Component {
@@ -22,7 +23,7 @@ class LoginForm extends Component {
   onButtonPress() {
     const { email, password } = this.props;
 
-    this.props.loginUser({ email, password });  // from the actions.
+    this.props.loginUser({ email, password }); // from the actions.
   }
 
   renderError() {
@@ -36,7 +37,7 @@ class LoginForm extends Component {
   }
 
   renderButton() {
-    // wether is loading or not..
+    // if user is loading or not..
     if (this.props.loading) {
       return <Spinner size="large" />;
     }
@@ -56,7 +57,7 @@ class LoginForm extends Component {
         </CardSection>
         <CardSection>
           <Input
-            secureTextEntry // hide the password
+            secureTextEntry
             label="Password"
             placeholder="password"
             onChangeText={this.onPasswordChange.bind(this)}

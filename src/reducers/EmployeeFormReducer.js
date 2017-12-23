@@ -1,7 +1,8 @@
 import {
   EMPLOYEE_UPDATE,
   EMPLOYEE_CREATE,
-  EMPLOYEE_SAVED
+  EMPLOYEE_SAVED,
+  EMPLOYEES_FETCH_SUCCESS
 } from "../actions/EmployeeActions";
 
 const INITIAL_STATE = {
@@ -18,6 +19,8 @@ export default (state = INITIAL_STATE, action) => {
       return INITIAL_STATE; //remember to set everything back to empty string.
     case EMPLOYEE_SAVED:
       return INITIAL_STATE; //remember to set everything back to empty string.
+    case EMPLOYEES_FETCH_SUCCESS:
+      return INITIAL_STATE;
     default:
       return state;
   }

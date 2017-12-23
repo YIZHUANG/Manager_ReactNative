@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Scene, Router, Actions } from "react-native-router-flux";
+import firebase from 'firebase';
 import LoginForm from "./components/LoginForm";
 import EmployeeList from "./components/EmployeeList";
 import CreateEmployee from "./components/CreateEmployee";
@@ -17,20 +18,22 @@ export default class RouterFlux extends Component {
           <Scene
             onRight={() => Actions.createEmployee()}
             rightTitle="Add"
+            onLeft={()=>firebase.auth().signOut()}
+            leftTitle="Log out"
             key="employeeList"
             component={EmployeeList}
-            title="Employees"
+            title="Dashboard"
             initial
           />
           <Scene
             key="createEmployee"
             component={CreateEmployee}
-            title="Create Employee"
+            title="Hire employees"
           />
           <Scene
             key="employeeEdit"
             component={EmployeeEdit}
-            title="Edit Employee"
+            title="Edit employee information"
           />
         </Scene>
       </Router>
