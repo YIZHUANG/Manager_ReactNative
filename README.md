@@ -8,7 +8,7 @@ $ Arrange tasks/ shifts to employees
 $ Fire employees
 $ Text employees
 ```
-## functions
+## Pre-install
 ```
 $ Use your own firebase config in App.js
 ```
